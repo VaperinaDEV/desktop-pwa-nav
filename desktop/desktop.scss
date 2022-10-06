@@ -13,6 +13,10 @@ body.pwa-footer-nav.footer-nav-visible {
         &:focus,
         &:hover {
           background: rgba(var(--primary-rgb),0.02);
+          &:disabled {
+            background: none;
+            cursor: default;
+          }
         }
       }
     }
