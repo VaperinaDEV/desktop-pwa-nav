@@ -7,15 +7,14 @@ export default {
     withPluginApi("0.8.13", (api) => {
       const site = api.container.lookup("site:main");
       this.capabilities = container.lookup("capabilities:main");
-      const isPwa = this.capabilities.isPwa;
-      const isIpadOS = this.capabilities.isIpadOS;
-      const isAndroid = this.capabilities.isAndroid;
-      const isWinphone = this.capabilities.isWinphone;
-      const isMobileDevice = site.isMobileDevice;
-      const mobileView = site.mobileView;
 
-      const isDesktop = isPwa && !isIpadOS && !isAndroid && !isWinphone && !isMobileDevice && !mobileView;
-
+      const isDesktop = this.capabilities.isPwa &&
+                        !this.capabilities.isIpadOS &&
+                        !this.capabilities.isAndroid &&
+                        !this.capabilities.isWinphone &&
+                        !site.isMobileDevice &&
+                        !site.mobileView;
+      
       if (isDesktop) {
         const applicationController = api.container.lookup("controller:application");
         applicationController.set("showFooterNav", true);
