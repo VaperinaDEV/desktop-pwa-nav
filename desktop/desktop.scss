@@ -1,10 +1,7 @@
-body.pwa-footer-nav.footer-nav-visible,
-body.pwa-footer-nav {
+body.pwa-footer-nav,
+body.pwa-footer-nav.footer-nav-visible {
   .sidebar-wrapper {
     height: calc(100vh - var(--header-offset, 0) - var(--footer-nav-height));
-  }
-  .topic-chat-float-container {
-    bottom: var(--footer-nav-height);
   }
   .footer-nav {
     bottom: 0;
@@ -35,7 +32,8 @@ body.pwa-footer-nav {
       }
     }      
   }
-  #reply-control {
+  #reply-control,
+  .topic-chat-float-container {
     bottom: var(--footer-nav-height);
   }
 }
