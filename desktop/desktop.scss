@@ -1,0 +1,41 @@
+body.pwa-footer-nav.footer-nav-visible,
+body.pwa-footer-nav {
+  .sidebar-wrapper {
+    height: calc(100vh - var(--header-offset, 0) - var(--footer-nav-height));
+  }
+  .topic-chat-float-container {
+    bottom: var(--footer-nav-height);
+  }
+  .footer-nav {
+    bottom: 0;
+    transition: none;
+    background: var(--secondary);
+    box-shadow: none;
+    .footer-nav-widget {
+      button {
+        &:focus,
+        &:hover {
+          background: rgba(var(--primary-rgb),0.02);
+        }
+      }
+    }
+  }
+  @supports (padding: 0px) {
+    .footer-nav.visible {
+      padding-bottom: 0;
+    }
+  }
+  #main-outlet {
+    padding-bottom: var(--footer-nav-height);
+    html.has-full-page-chat & {
+      max-height: calc( var(--chat-vh, 1vh) * 100 - var(--header-offset, 0px) - var(--footer-nav-height) - var(--composer-height, 0px));
+      padding-bottom: 0;
+      .chat-browse-view__content_wrapper {
+        margin: 2rem 1rem calc(var(--footer-nav-height) + 1rem) 1rem;
+      }
+    }      
+  }
+  #reply-control {
+    bottom: var(--footer-nav-height);
+  }
+}
