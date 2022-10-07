@@ -16,6 +16,11 @@ body.pwa-footer-nav.footer-nav-visible {
           &:disabled {
             background: none;
             cursor: default;
+            .discourse-no-touch & {
+              .d-icon {
+                color: var(--header_primary-medium);
+              }
+            }
           }
         }
       }
