@@ -23,6 +23,11 @@ body.pwa-footer-nav.footer-nav-visible {
             }
           }
         }
+        &:not(:disabled) {
+          .d-icon {
+            color: var(--primary);
+          }
+        }
       }
     }
   }
