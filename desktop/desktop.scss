@@ -51,4 +51,7 @@ body.pwa-footer-nav.footer-nav-visible {
   .topic-chat-float-container {
     bottom: var(--footer-nav-height);
   }
+  &:not(.ios-safari-composer-hacks) #reply-control.open {
+    max-height: calc(100vh - var(--header-offset, 4em) - var(--footer-nav-height));
+  }
 }
