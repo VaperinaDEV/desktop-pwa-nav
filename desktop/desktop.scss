@@ -54,4 +54,11 @@ body.pwa-footer-nav.footer-nav-visible {
   &:not(.ios-safari-composer-hacks) #reply-control.open {
     max-height: calc(100vh - var(--header-offset, 4em) - var(--footer-nav-height));
   }
+  @supports (--custom: property) {
+    .fullscreen-composer & {
+      #reply-control.fullscreen {
+        height: calc(var(--composer-vh, 1vh) * 100 - var(--footer-nav-height)) !important;
+      }
+    }
+  }
 }
